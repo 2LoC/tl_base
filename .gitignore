@@ -1,0 +1,24 @@
+# ----------------------------------
+# auto-generated file, do not modify
+# ----------------------------------
+
+# ----------------------------------
+# DEFAULT_IGNORE_LIST
+# ----------------------------------
+
+build*/
+install/
+*.swp
+*kdev*
+*compile_commands.json*
+.ycm_extra_conf.py
+tags
+.undo*
+Session.vim
+.vim-bookmarks
+
+# ----------------------------------
+# USER DEFINED IGNORE_LIST
+# ----------------------------------
+
+

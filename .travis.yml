@@ -1,0 +1,60 @@
+# ----------------------------------
+# auto-generated file, do not modify
+# ----------------------------------
+
+sudo: false
+language: cpp
+
+common_sources: &all_sources
+  - ubuntu-toolchain-r-test
+  - llvm-toolchain-trusty
+  - llvm-toolchain-trusty-3.9
+  - llvm-toolchain-trusty-4.0
+  - llvm-toolchain-trusty-5.0
+
+matrix:
+  include:
+    - os: linux
+      compiler: clang
+      addons:
+        apt:
+          sources: *all_sources
+          packages:
+            - clang-3.8
+      env: COMPILER='clang++-3.8'
+
+
+    - os: linux
+      compiler: clang
+      addons:
+        apt:
+          sources: *all_sources
+          packages:
+            - clang-4.0
+      env: COMPILER='clang++-4.0'
+
+
+    - os: linux
+      compiler: clang
+      addons:
+        apt:
+          sources: *all_sources
+          packages:
+            - clang-5.0
+      env: COMPILER='clang++-5.0'
+
+before install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -y
+
+
+
+script:
+  - mkdir build
+  - cd build
+  - cmake -DCMAKE_CXX_COMPILER=$COMPILER -DCMAKE_INSTALL_PREFIX=../install -DTLOC_DETAILED_LOGS=ON ../
+  - make
+  - cd ../include/
+  - mkdir build
+  - cd build
+  - cmake -DCMAKE_CXX_COMPILER=$COMPILER -DCMAKE_INSTALL_PREFIX=../install -DTLOC_DETAILED_LOGS=ON ../
