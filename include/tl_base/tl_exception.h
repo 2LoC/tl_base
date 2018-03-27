@@ -9,7 +9,9 @@ namespace tloc { namespace exceptions {
   class _name_ : public std::runtime_error \
   {\
     public:\
-      using base_type = exception;\
+      using base_type = std::runtime_error;\
+    \
+    public:\
     explicit _name_(const std::string& what_arg, long int a_line, const char* a_file)\
     : base_type(what_arg)\
     , m_line(a_line)\
@@ -30,7 +32,9 @@ namespace tloc { namespace exceptions {
   class _name_ : public std::runtime_error \
   {\
     public:\
-      using base_type = exception;\
+      using base_type = runtime_error;\
+    \
+    public:\
     explicit _name_(const std::string& what_arg, _info_type_ a_info, long int a_line, const char* a_file)\
     : base_type(what_arg)\
     , m_line(a_line)\

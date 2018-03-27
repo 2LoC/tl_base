@@ -1,10 +1,6 @@
 # -----------------------------------------------------------------------------
 
-TLOC_INCLUDE("/tl_base_ci/tl_add_ycm_config.cmake" ${tl_base_ci_INCLUDE_DIRECTORIES})
-TLOC_INCLUDE("/tl_base_ci/tl_add_travis.cmake" ${tl_base_ci_INCLUDE_DIRECTORIES})
-TLOC_INCLUDE("/tl_base_ci/tl_add_gitignore.cmake" ${tl_base_ci_INCLUDE_DIRECTORIES})
-TLOC_INCLUDE("/tl_base_ci/tl_add_superbuild.cmake" ${tl_base_ci_INCLUDE_DIRECTORIES})
-TLOC_INCLUDE("/tl_base_ci/tl_add_setup.cmake" ${tl_base_ci_INCLUDE_DIRECTORIES})
+TLOC_INCLUDE("/tl_base_ci/tl_base_ci.cmake" ${tl_base_ci_INCLUDE_DIRECTORIES})
 
 # -----------------------------------------------------------------------------
 # superbuild
@@ -20,11 +16,13 @@ set(TRAVIS_SCRIPT
   - cd build
   - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=$COMPILER -DCMAKE_INSTALL_PREFIX=../install -DTLOC_DETAILED_LOGS=ON ../
   - make install
+  - ctest
   - cd ..
   - mkdir build_release
   - cd build_release
   - cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=$COMPILER -DCMAKE_INSTALL_PREFIX=../install -DTLOC_DETAILED_LOGS=ON ../
   - make install
+  - ctest
 "
 )
 

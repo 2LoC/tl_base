@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 
-TLOC_INCLUDE("/tl_base_ci/tl_add_executable.cmake" ${tl_base_ci_INCLUDE_DIRECTORIES})
+tl_add_catch()
 
 # -----------------------------------------------------------------------------
 
@@ -26,6 +26,12 @@ tl_add_executable(
     ${EXE_NAME}
   SOURCE_FILES
     ${${EXE_NAME}_SOURCE_FILES}
+  LINK_LIBS
+    "Catch2::Catch;tl_base"
+  BUILD_INTERFACE
+    ${CMAKE_SOURCE_DIR}/include/
   )
+
+add_test(NAME ${EXE_NAME} COMMAND ${EXE_NAME})
 
 # -----------------------------------------------------------------------------

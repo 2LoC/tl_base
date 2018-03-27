@@ -1,9 +1,5 @@
 # -----------------------------------------------------------------------------
 
-include("${tl_base_ci_INCLUDE_DIRECTORIES}/tl_base_ci/tl_add_library.cmake")
-
-# -----------------------------------------------------------------------------
-
 set(LIB_NAME "tl_base")
 
 # -----------------------------------------------------------------------------
@@ -32,6 +28,8 @@ tl_add_library(
     ${${LIB_NAME}_PUBLIC_HEADER_FILES}
   SOURCE_FILES
     ${${LIB_NAME}_SOURCE_FILES}
+  BUILD_INTERFACE
+    ${CMAKE_SOURCE_DIR}/include/
   )
 
 # -----------------------------------------------------------------------------
