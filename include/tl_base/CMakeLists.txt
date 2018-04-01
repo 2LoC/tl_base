@@ -6,6 +6,7 @@ set(LIB_NAME "tl_base")
 
 set(${LIB_NAME}_PUBLIC_HEADER_FILES
   "tl_common.h"
+  "tl_container.h"
   "tl_exception.h"
   "tl_platform.h"
   "tl_pointer.h"
@@ -14,7 +15,9 @@ set(${LIB_NAME}_PUBLIC_HEADER_FILES
   )
 
 set(${LIB_NAME}_SOURCE_FILES
+  "tl_cast.cpp"
   "tl_common.cpp"
+  "tl_container.cpp"
   "tl_exception.cpp"
   "tl_pointer.cpp"
   )

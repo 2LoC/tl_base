@@ -12,19 +12,19 @@ namespace tloc { namespace exceptions {
       using base_type = std::runtime_error;\
     \
     public:\
-    explicit _name_(const std::string& what_arg, long int a_line, const char* a_file)\
+    explicit _name_(const std::string& what_arg, long a_line, const char* a_file)\
     : base_type(what_arg)\
     , m_line(a_line)\
     , m_file(a_file)\
     { }\
-    explicit _name_(const char* what_arg, long int a_line, const char* a_file)\
+    explicit _name_(const char* what_arg, long a_line, const char* a_file)\
     : base_type(what_arg)\
     , m_line(a_line)\
     , m_file(a_file)\
     { }\
     \
-    private:\
-      long int m_line;\
+    public:\
+      long  m_line;\
       const char* m_file;\
   }
 
@@ -48,7 +48,7 @@ namespace tloc { namespace exceptions {
     , m_info(std::move(a_info))\
     { }\
     \
-    private:\
+    public:\
       long int    m_line;\
       const char* m_file;\
       _info_type_ m_info;\

@@ -3,12 +3,10 @@
 TLOC_INCLUDE("/tl_base_ci/tl_base_ci.cmake" ${tl_base_ci_INCLUDE_DIRECTORIES})
 
 # -----------------------------------------------------------------------------
-# superbuild
 
 tl_add_superbuild(DESTINATION "${CMAKE_SOURCE_DIR}/")
 
 # -----------------------------------------------------------------------------
-# travis
 
 set(TRAVIS_SCRIPT
 "\
@@ -32,19 +30,18 @@ tl_add_travis(
   )
 
 # -----------------------------------------------------------------------------
-# gitignore
 
-tl_add_gitignore(
-  IGNORE_LIST "*setup*.sh"
-  )
+tl_add_gitignore()
 
 # -----------------------------------------------------------------------------
-# ycm
+
+tl_add_ctagsignore()
+
+# -----------------------------------------------------------------------------
 
 tl_add_ycm_config()
 
 # -----------------------------------------------------------------------------
-# setup files
 
 tl_add_setup(
   NAME "setup"
@@ -63,7 +60,6 @@ tl_add_setup(
   )
 
 # -----------------------------------------------------------------------------
-# project
 
 add_subdirectory(${PROJ_NAME})
 
