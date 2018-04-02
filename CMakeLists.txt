@@ -82,19 +82,11 @@ TLOC_LOG_COMMON_VARIABLES()
 
 # -----------------------------------------------------------------------------
 
-# get the current directory name, which will be this project's external
-# build name
-string(REPLACE "/" ";" PATH_LIST "${CMAKE_SOURCE_DIR}")
-list(REVERSE PATH_LIST)
-list(GET PATH_LIST 0 PROJ_NAME)
-
-# -----------------------------------------------------------------------------
-
 if(NOT TLOC_DISABLE_TESTS)
   enable_testing()
 endif()
 
-project(${PROJ_NAME})
+project(tl_base)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD ${TLOC_CMAKE_CXX_STANDARD})
