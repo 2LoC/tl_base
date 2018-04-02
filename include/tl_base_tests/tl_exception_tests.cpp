@@ -3,10 +3,14 @@
 
 #include <tl_base/tl_exception.h>
 
-TLOC_EXCEPTION_DEFINE(test_exception);
+namespace tl { namespace tests {
 
-TEST_CASE("Exception", "")
-{
-  auto throw_test = []() { TLOC_THROW_EXCEPTION(test_exception, "Test Exception"); };
-  REQUIRE_THROWS(throw_test());
-}
+  TLOC_EXCEPTION_DEFINE(test_exception);
+
+  TEST_CASE("Exception", "")
+  {
+    auto throw_test = []() { TLOC_THROW_EXCEPTION(test_exception, "Test Exception"); };
+    REQUIRE_THROWS(throw_test());
+  }
+
+};};
