@@ -1,7 +1,7 @@
 #pragma once
 
 #include <array>
-#include <tl_base/tl_assert.h>
+#include "tl_assert.h"
 
 namespace tl { namespace core {
 

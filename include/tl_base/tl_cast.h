@@ -1,6 +1,6 @@
 #pragma once
 
-#include <tl_base/tl_types.h>
+#include "tl_types.h"
 
 namespace tl {
 
