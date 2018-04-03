@@ -31,8 +31,6 @@ tl_add_library(
     ${${LIB_NAME}_PUBLIC_HEADER_FILES}
   SOURCE_FILES
     ${${LIB_NAME}_SOURCE_FILES}
-  BUILD_INTERFACE
-    ${CMAKE_SOURCE_DIR}/include/
   )
 
 # -----------------------------------------------------------------------------
