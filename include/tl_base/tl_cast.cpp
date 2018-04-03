@@ -1,10 +1,10 @@
 #include "tl_cast.h"
 
-#include <tl_base/tl_types.h>
+#include "tl_types.h"
+#include "tl_assert.h"
 
 #include <type_traits>
 #include <limits>
-#include <tl_base/tl_assert.h>
 
 namespace tl {
 
