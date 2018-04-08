@@ -31,6 +31,8 @@ tl_add_library(
     ${${LIB_NAME}_PUBLIC_HEADER_FILES}
   SOURCE_FILES
     ${${LIB_NAME}_SOURCE_FILES}
+  CXX_STANDARD 14
+  CXX_STANDARD_REQUIRED ON
   )
 
 # -----------------------------------------------------------------------------
