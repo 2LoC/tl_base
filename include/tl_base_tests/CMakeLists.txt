@@ -30,7 +30,7 @@ tl_add_executable(
   LINK_LIBS
     "Catch2::Catch;tl_base"
   BUILD_INTERFACE
-    ${CMAKE_SOURCE_DIR}/include/
+    ${PROJECT_SOURCE_DIR}/include/
   CXX_STANDARD 14
   CXX_STANDARD_REQUIRED ON
   )

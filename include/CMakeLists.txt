@@ -10,7 +10,7 @@ tl_add_superbuild(
   PROJ_NAME
     ${PROJ_NAME}
   DESTINATION
-    "${CMAKE_SOURCE_DIR}/"
+    ${PROJECT_SOURCE_DIR}
   )
 
 # -----------------------------------------------------------------------------
@@ -54,7 +54,7 @@ tl_add_setup(
   NAME "setup"
   BUILD_DIR "build"
   BUILD_TYPE "Debug"
-  DESTINATION ${CMAKE_SOURCE_DIR}
+  DESTINATION ${PROJECT_SOURCE_DIR}
   CL_ARGS ${CL_ARGS}
   )
 
@@ -62,7 +62,7 @@ tl_add_setup(
   NAME "setup_release"
   BUILD_DIR "build_release"
   BUILD_TYPE "Release"
-  DESTINATION ${CMAKE_SOURCE_DIR}
+  DESTINATION ${PROJECT_SOURCE_DIR}
   CL_ARGS ${CL_ARGS}
   )
 
