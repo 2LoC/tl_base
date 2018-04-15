@@ -8,6 +8,7 @@ set(${LIB_NAME}_PUBLIC_HEADER_FILES
   "tl_common.h"
   "tl_container.h"
   "tl_exception.h"
+  "tl_getter_setter.h"
   "tl_platform.h"
   "tl_pointer.h"
   "tl_types.h"
